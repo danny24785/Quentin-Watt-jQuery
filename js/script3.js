@@ -1,5 +1,5 @@
-// Script for #2
+// Script for #3
 
-$('#para').click(function(){
-	$('#para').hide();
-})
+$(document).ready(function(){
+	$('#para').fadeIn(5000);
+});
