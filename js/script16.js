@@ -2,12 +2,17 @@
 
 /******** script according to Quentin */
 $('#username').keyup(function(){
-	var username_value = $('#username').val();
-	$('#username_feedback').html(username_value);
+	var max_length = 20;
+	var username_length = $('#username').val().length;
+	var chars_left = max_length - username_length;
+	if (chars_left < 0){
+		$('#username').css('border', '1px solid red');
+	}
+	else if (chars_left >= 0){
+		$('#username').css('border', '1px solid black');
+	}
+	$('#username_feedback').html(chars_left);
 });
 /********
-$('#username').on('keydown', function(){
-	alert('u have pressed key');								
-});
 
 /******** same script rewritten according to Peter Kassenaar ********/
