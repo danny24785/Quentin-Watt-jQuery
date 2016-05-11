@@ -6,7 +6,7 @@ $('#username').keyup(function(){
 	var username_length = $('#username').val().length;
 	var chars_left = max_length - username_length;
 	if (chars_left < 0){
-		$('#username').css('border', '1px solid red');
+		$('#username').css('border', '2px solid red');
 	}
 	else if (chars_left >= 0){
 		$('#username').css('border', '1px solid black');
